@@ -1,6 +1,20 @@
 #include "sender.h"
 #include "net_utils.h"
 
+Sender::Sender(AddressNICVector& memory_nodes) {
+}
+
+Sender::~Sender() {
+  
+}
+
+bool Sender::Initialize() {
+}
+
+void Sender::Stop() {
+  
+}
+
 SenderWorker::SenderWorker(int id, std::string memory_node_addr,
                            std::string nic, size_t tcp_send_buffer_size,
                            bool do_extra_copy)

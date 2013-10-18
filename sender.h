@@ -9,10 +9,15 @@ class SenderWorker;
 
 class Sender {
 public:
-  Sender();
+  typedef std::vector<std::pair<std::string, string::string> > AddressNICVector;
+  Sender(AddressNICVector& memory_nodes);
   virtual ~Sender();
 
+  bool Initialize();
+  void Stop();
+
  private:
+  AddressNICVector address_nics_;
   std::vector<SenderWorker> workers_;
 };
 
